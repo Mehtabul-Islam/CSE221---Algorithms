@@ -12,5 +12,6 @@ public class taska {
                 System.out.println(b + " is an Odd number.");
             }
         }
+        sc.close();
     }
 }
