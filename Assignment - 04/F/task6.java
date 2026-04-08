@@ -49,24 +49,19 @@ public class task6 {
 //                 if (dx == 0 && dy == 0) {
 //                     continue;
 //                 }
-
 //                 int nx = x + dx;
 //                 int ny = y + dy;
 //                 if (nx >= 1 && nx <= n && ny >= 1 && ny <= n) {
 //                     count++;
-                    
 //                 }
-
 //             }
 //         }
 //         pw.println(count);
-
 //         for (int dx = -1; dx <= 1; dx++) {
 //             for (int dy = -1; dy <= 1; dy++) {
 //                 if (dx == 0 && dy == 0) {
 //                     continue;
 //                 }
-
 //                 int nx = x + dx;
 //                 int ny = y + dy;
 //                 if (nx >= 1 && nx <= n && ny >= 1 && ny <= n) {
@@ -74,7 +69,6 @@ public class task6 {
 //                 }
 //             }
 //         }
-        
 //         pw.flush();
 //         pw.close();
 //     }
