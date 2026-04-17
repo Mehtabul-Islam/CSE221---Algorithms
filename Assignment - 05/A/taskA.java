@@ -40,7 +40,6 @@ public class taskA {
                 }
             }
         }
-        
         pw.flush();
         pw.close();        
     }
