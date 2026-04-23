@@ -98,7 +98,7 @@ public class taskC {
             }
             pw.println();
         }
-        
+
         pw.flush();
         pw.close();
     }
