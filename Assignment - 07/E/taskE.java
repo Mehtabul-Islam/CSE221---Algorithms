@@ -50,20 +50,20 @@ public class taskE{
 
         while (!pq.isEmpty()) {
             int[] cur = pq.poll();
-            int d = cur[0];
-            int uNode = cur[1];
-            int parity = cur[2];
-            if (d != dist[uNode][parity]){
+            int a = cur[0];
+            int b = cur[1];
+            int c = cur[2];
+            if (a != dist[b][c]){
                 continue;
             } 
-            for (int[] edge : graph[uNode]) {
+            for (int[] edge : graph[b]) {
                 int to = edge[0];
                 int wt = edge[1];
                 int p2 = wt & 1;
-                if (p2 == parity){
+                if (p2 == c){
                     continue;
                 } 
-                int nd = d + wt;
+                int nd = a + wt;
                 if (nd < dist[to][p2]) {
                     dist[to][p2] = nd;
                     pq.offer(new int[]{nd, to, p2});
