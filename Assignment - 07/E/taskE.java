@@ -37,21 +37,17 @@ public class taskE{
         }
 
         int [][] dist = new int[N + 1][2];
-        int x = Integer.MAX_VALUE / 4;
+        int x = 1000000000;;
         for (int i = 0; i <= N; i++) {
             dist[i][0] = x;
             dist[i][1] = x;
         }
-        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> Integer.compare(a[1], b[1]));
-        for (int[] edge : graph[1]) {
-            int to = edge[0];
-            int wt = edge[1];
-            int p = wt & 1;
-            if (wt < dist[to][p]) {
-                dist[to][p] = wt;
-                pq.offer(new int[]{wt, to, p});
-            }
-        }
+        PriorityQueue<int[]> pq = new PriorityQueue<>((a, b) -> a[0] - b[0]);
+        dist[1][0] = 0;
+        dist[1][1] = 0;
+        pq.offer(new int[]{0, 1, 0});
+        pq.offer(new int[]{0, 1, 1});
+
         while (!pq.isEmpty()) {
             int[] cur = pq.poll();
             int d = cur[0];
