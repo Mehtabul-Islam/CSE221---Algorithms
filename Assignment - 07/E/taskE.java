@@ -37,7 +37,7 @@ public class taskE{
         }
 
         int [][] dist = new int[N + 1][2];
-        int x = 1000000000;;
+        int x = 1000000000;
         for (int i = 0; i <= N; i++) {
             dist[i][0] = x;
             dist[i][1] = x;
