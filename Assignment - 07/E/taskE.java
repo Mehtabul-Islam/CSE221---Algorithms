@@ -57,16 +57,16 @@ public class taskE{
                 continue;
             } 
             for (int[] edge : graph[b]) {
-                int to = edge[0];
-                int wt = edge[1];
-                int p2 = wt & 1;
+                int e1 = edge[0];
+                int e2 = edge[1];
+                int p2 = e2 & 1;
                 if (p2 == c){
                     continue;
                 } 
-                int nd = a + wt;
-                if (nd < dist[to][p2]) {
-                    dist[to][p2] = nd;
-                    pq.offer(new int[]{nd, to, p2});
+                int n = a + e2;
+                if (n < dist[e2][p2]) {
+                    dist[e1][p2] = n;
+                    pq.offer(new int[]{n, e1, p2});
                 }
             }
         }
